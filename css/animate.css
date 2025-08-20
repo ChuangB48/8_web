@@ -1,0 +1,18 @@
+body{
+    background-color: black;
+}
+#eight,#web{
+    position: absolute;
+    color: black;
+    font-size: 1000%;
+}
+#eight{
+    right: 50%;
+    bottom: 50%;
+    transform: translateX(25%);
+}
+#web{
+    left: 50%;
+    top: 50%;
+    transform: translateX(-25%);
+}

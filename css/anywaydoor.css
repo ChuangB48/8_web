@@ -1,0 +1,27 @@
+#anywaydoor{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 90%;
+    max-height: 90%;
+}
+#lock{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 80%;
+    height: 10%;
+    border: 1px gray solid;
+    border-radius: 20px;
+    background-color: gray;
+}
+#lock_span{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: black;
+    font-size: 150%;
+}

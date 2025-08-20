@@ -1,0 +1,53 @@
+body{
+    overflow: hidden;
+    user-select: none;
+}
+#screen{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100vw;
+    height: auto;
+}
+#background{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 100vh;
+}
+#container{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100vw;
+    height: 10vh;
+    border: 1px black solid;
+    background-color: black;
+    opacity: 0.5;
+}
+#title{
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 250%;
+    color: white;
+}
+#setting{
+    position: absolute;
+    left: 80%;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 80%;
+}
+#board{
+    position: absolute;
+    left: 50%;
+    top: 10vh;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 90vh;
+    border: transparent;
+}

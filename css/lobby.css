@@ -1,0 +1,25 @@
+.button{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70vw;
+    height: 10vh;
+    border: 1px gray solid;
+    border-radius: 100vh;
+}
+.button span{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 200%;
+}
+#timemachine{
+    top: 10%;
+}
+#anywaydoor{
+    top: 30%;
+}
+#magiclamp{
+    top: 50%;
+}

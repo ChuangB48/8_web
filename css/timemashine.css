@@ -1,0 +1,57 @@
+#form{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 90%;
+    height: 90%;
+    border: 1px black solid;
+    background-color: black;
+    border-radius: 25px;
+    opacity: 0.5;
+}
+#question{
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    font-size: 200%;
+    color: white;
+}
+#inputzone{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+    height: 5%;
+    font-size: 200%;
+}
+#inputzone:focus{
+    outline: transparent;
+}
+#enter{
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    transform: translateX(-50%);
+    width: 10%;
+    height: 10%;
+    border: 1px white solid;
+    border-radius: 20px;
+}
+#enter_span{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+}
+#success{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 500%;
+    color: white;
+}

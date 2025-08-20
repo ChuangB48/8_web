@@ -1,0 +1,42 @@
+#error,#clear{
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+}
+#error{
+    left: 30%;
+    border: 1px blue solid;
+}
+#clear{
+    left: 70%;
+    border: 1px green solid;
+}
+#error_span,#clear_span{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 200%;
+}
+#rule{
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+    width: 70%;
+    height: 20%;
+    border: 1px black solid;
+    background-color: black;
+    opacity: 0.5;
+}
+#rule_span{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 120%;
+    color: white;
+}
