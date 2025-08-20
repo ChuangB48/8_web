@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            body{
+                user-select: none;
+                background-color: wheat;
+            }
+            #con{
+                position: absolute;
+                left: 50%;
+                top: 0px;
+                transform: translateX(-50%);
+                width: 80vw;
+                height: auto;
+                max-height: 10vh;
+                font-size: 300%;
+                text-align: center;
+            }
+            #board{
+                position: relative;
+                left: 0px;
+                top: 10vh;
+                width: 100vw;
+                height: auto;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .c_button{
+                position: relative;
+                width: 20%;
+                height: 200px;
+                border: transparent;
+                background-color: greenyellow;
+                border-radius: 50px;
+            }
+            .w_button{
+                position: relative;
+                width: 20%;
+                height: 200px;
+                border: transparent;
+                background-color: red;
+                border-radius: 50px;
+            }
+            .button_span{
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+                font-size: 500%;
+            }
+        </style>
+    </head>
+    <body>
+        <span id="con">
+            嗨!恭喜你全部通關了!!!在這裡把你剛剛沒玩到的異常玩完吧!
+        </span>
+        <div id="board"></div>
+        <script src="js/banned.js"></script>
+        <script src="js/levels.js"></script>
+        <script>
+            let p=document.cookie.split('=')[3].split(',');
+            for(let a=1;a<=levels;a++){
+                let z=false;
+                for(let b=0;b<p.length;b++){
+                    if(a==p[b]){
+                        z=true;
+                        break;
+                    }
+                }
+                if(z){
+                    document.getElementById('board').innerHTML+='<div class="c_button" onclick="document.cookie=\'inform=999='+a.toString()+'='+document.cookie.split('=')[3]+'\';window.location.href=\'web'+a.toString()+'.html\';"><span class="button_span">'+a.toString()+'</span></div>';
+                }
+                else{
+                    document.getElementById('board').innerHTML+='<div class="w_button" onclick="document.cookie=\'inform=999='+a.toString()+'='+document.cookie.split('=')[3]+'\';window.location.href=\'web'+a.toString()+'.html\';"><span class="button_span">'+a.toString()+'</span></div>';
+                }
+            }
+        </script>
+    </body>
+</html>

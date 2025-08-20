@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/const.css">
+        <link rel="stylesheet" type="text/css" href="css/setting.css">
+    </head>
+    <body>
+        <div id="screen">
+            <img src="img/background.jpg" id="background" draggable="false">
+            <div id="container">
+                <span id="title" onclick="window.location.href='start.html';">
+                    來自未來的網站
+                </span>
+            </div>
+            <div id="board">
+                <div id="error" onclick="window.location.href='animate.html';">
+                    <span id="error_span">
+                        錯誤
+                    </span>
+                </div>
+                <div id="clear" onclick="window.location.href='animate.html';">
+                    <span id="clear_span">
+                        正確
+                    </span>
+                </div>
+                <div id="rule">
+                    <span id="rule_span">
+                        如果有異常，請按"錯誤"。
+                        <br>
+                        如果沒有異常，請按"正確"。
+                    </span>
+                </div>
+            </div>
+        </div>
+        <script src="js/banned.js"></script>
+    </body>
+</html>

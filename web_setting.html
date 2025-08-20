@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/const.css">
+        <link rel="stylesheet" type="text/css" href="css/setting.css">
+    </head>
+    <body>
+        <div id="screen">
+            <img src="img/background.jpg" id="background" draggable="false">
+            <div id="container">
+                <span id="title" onclick="window.location.href='web.html';">
+                    來自未來的網站
+                </span>
+            </div>
+            <div id="board">
+                <div id="error" onclick="javascript:wrong()">
+                    <span id="error_span">
+                        錯誤
+                    </span>
+                </div>
+                <div id="clear" onclick="javascript:correct()">
+                    <span id="clear_span">
+                        正確
+                    </span>
+                </div>
+            </div>
+        </div>
+        <script src="js/banned.js"></script>
+        <script src="js/generation.js"></script>
+        <script src="js/choose.js"></script>
+    </body>
+</html>

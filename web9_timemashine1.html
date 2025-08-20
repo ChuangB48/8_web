@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/const.css">
+        <link rel="stylesheet" type="text/css" href="css/timemashine.css">
+        <style>
+            #jumpscare{
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+                height: 0px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="screen">
+            <img src="img/background.jpg" id="background" draggable="false">
+            <div id="container">
+                <span id="title" onclick="window.location.href='web9.html';">
+                    來自未來的網站
+                </span>
+                <img src="img/setting.png" id="setting" draggable="false" onclick="window.location.href='web9_setting.html';">
+            </div>
+            <div id="board">
+                <div id="form">
+                    <span id="question">
+                        預計使用日期
+                    </span>
+                    <input type="date" id="inputzone">
+                    <div id="enter" onclick="window.location.href='web9_timemashine2.html';">
+                        <span id="enter_span">
+                            確定
+                        </span>
+                    </div>
+                </div>
+                <img src="img/jumpscare.jpg" id="jumpscare" draggable="false">
+            </div>
+        </div>
+        <script src="js/banned.js"></script>
+        <script src="js/generation.js"></script>
+        <script>
+            let sound=new Audio('img/surprise.mp3');
+            sound.play();
+            let j=document.getElementById('jumpscare');
+            let h=0;
+            let d=0;
+            let jump=window.setInterval(()=>{
+                j.style.height=h.toString()+'px';
+                h+=d;
+                d++;
+                if(h>=2000){
+                    j.style.height='0px';
+                    j.style.opacity='0';
+                    j.style.zIndex='-1';
+                    window.clearInterval(jump);
+                }
+            },1);
+        </script>
+    </body>
+</html>
