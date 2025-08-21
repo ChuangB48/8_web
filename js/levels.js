@@ -1,1 +1,1 @@
-let levels=10;
+let levels=12;
