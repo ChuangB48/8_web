@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/const.css">
+        <link rel="stylesheet" type="text/css" href="css/magiclamp.css">
+        <style>
+            #aladdin{
+                position: absolute;
+                left: 50%;
+                top: 20%;
+                height: 50%;
+            }
+            #dream_span{
+                position: absolute;
+                left: 5%;
+                top: 80%;
+            }
+            #dream{
+                position: absolute;
+                left: 20%;
+                top: 80%;
+            }
+            #go{
+                position: absolute;
+                left: 50%;
+                top: 80%;
+                width: 10%;
+                border: 1px black solid;
+                border-radius: 10px;
+
+                text-align: center;
+            }
+            #form{
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+                width: 90%;
+                height: 90%;
+                border: 1px black solid;
+                background-color: black;
+                border-radius: 25px;
+                opacity: 0;
+                z-index: -1;
+            }
+            #form_span{
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+                font-size: 500%;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="screen">
+            <img src="img/background.jpg" id="background" draggable="false">
+            <div id="container">
+                <span id="title" onclick="window.location.href='web12.html';">
+                    來自未來的網站
+                </span>
+                <img src="img/setting.png" id="setting" draggable="false" onclick="window.location.href='web12_setting.html';">
+            </div>
+            <div id="board">
+                <img src="img/magiclamp.png" id="magiclamp" draggable="false">
+                <img src="img/aladdin.png" id="aladdin" draggable="false">
+                <span id="dream_span">
+                    請輸入你的願望
+                </span>
+                <input type="text" id="dream">
+                <div id="go" onclick="javascript:dream()">
+                    送出
+                </div>
+                <div id="form">
+                    <span id="form_span">
+                        乾我屁事
+                    </span>
+                </div>
+            </div>
+        </div>
+        <script src="js/banned.js"></script>
+        <script src="js/generation.js"></script>
+        <script>
+            function dream(){
+                let d=document.getElementById('dream');
+                if(d.value!=''){
+                    document.getElementById('form').style.zIndex='1';
+                    document.getElementById('form').style.opacity='0.5';
+                    window.setTimeout(()=>{
+                        document.getElementById('form').style.zIndex='-1';
+                        document.getElementById('form').style.opacity='0';
+                        d.value='';
+                    },500);
+                }
+            }
+        </script>
+    </body>
+</html>
