@@ -43,5 +43,15 @@
         </div>
         <script src="js/banned.js"></script>
         <script src="js/generation.js"></script>
+        <script>
+            window.setInterval(()=>{
+                if(Math.random()>0.8){
+                    document.getElementById('goast').style.opacity='1';
+                    window.setTimeout(()=>{
+                        document.getElementById('goast').style.opacity='0';
+                    },1)
+                }
+            },10)
+        </script>
     </body>
 </html>
